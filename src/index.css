@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@layer utilities;
+
+@layer utilities{
+  .bg-maingreen{
+    background-color: #1ABC9C;
+  }
+  .layer{
+    display: none;
+  }
+}
+.active{
+  background-color: #1ABC9C;
+  padding-inline:7px ;
+  padding-block: 5px;
+  border-radius: 5px;
+  color: white;
+  transition: background-color 0.3s;
+}
