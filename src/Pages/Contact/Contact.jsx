@@ -24,7 +24,7 @@ export default function Contact({toggleTheme,theme}) {
                 <p className="text-gray-700 text-xl relative before:absolute before:w-[80px] dark:before:bg-white dark:after:bg-white dark:text-white before:h-[4px] before:bg-gray-700 before:left-[40px] before:top-[9px] after:absolute after:w-[80px] after:h-[4px] after:bg-gray-700 after:right-[40px] after:top-[9px]"><FaStar /></p>
             </div>
             <div>
-              <form className="flex flex-col gap-4 shadow-md rounded-2xl p-5 space-y-1 dark:text-white">
+              <form className="flex flex-col gap-4 shadow-md rounded-2xl p-5 w-[90%] mx-auto sm:w-[90%] space-y-1 dark:text-white">
                <div className="flex flex-col relative">
                  <label htmlFor="name" className="px-2 absolute text-green-400 top-1 opacity-0 invisible">Your Name:</label>
                   <input className="border-b-2  peer border-green-400/70 outline-none py-3 px-2 rounded-md placeholder:text-gray-700/70 dark:placeholder:text-gray-300" onInput={isInputTouched} type="text" placeholder="Your Name" name="name" />
