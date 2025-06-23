@@ -1,7 +1,7 @@
 import { FaStar } from "react-icons/fa";
-import port1 from "../../../public/images/poert1.png";
-import port2 from "../../../public/images/port2.png";
-import port3 from "../../../public/images/port3.png";
+import port1 from "../../assets/poert1.png"
+import port2 from "../../assets/port2.png"
+import port3 from "../../assets/port3.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
