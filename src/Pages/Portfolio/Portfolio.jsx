@@ -8,14 +8,19 @@ import { useState, useEffect } from "react";
 export default function Portfolio({toggleTheme,theme}) {
      const images = [port1, port2, port3]
       const [index, setIndex] = useState(null);
-    function getCurrentImage(e){
-      if(e.target.closest(".group").querySelector("img")){
-       const selectedImage = e.target.closest(".group").querySelector("img").src.split("/")[5];
-       images.map((image, index) => {
-            image.includes(selectedImage) ? setIndex(index) : "not found" 
-       })
-      }
+   function getCurrentImage(e) {
+        const clickedImg = e.target.closest(".group").querySelector("img");
+        if (!clickedImg) return;
+
+        const src = clickedImg.getAttribute("src");
+        const selectedIndex = images.findIndex((image) => image === src);
+
+        if (selectedIndex !== -1) {
+            setIndex(selectedIndex);
+            document.querySelector(".overlay").classList.remove("hidden");
+        }
     }
+
     function backToMain(e){
         if(e.target !== e.target.closest(".overlay").querySelector("img")){
             document.querySelector(".overlay").classList.add("hidden");
@@ -67,7 +72,7 @@ export default function Portfolio({toggleTheme,theme}) {
    </div>
     {index !== null && (
         <div className="overlay  left-0 bottom-0 right-0 top-0 fixed bg-gray-400/60 z-20 flex justify-center items-center" onClick={backToMain}>
-        <img className="sm:w-[40%] w-[95%] rounded-md mx-auto" src={images[index]} alt="Image" />
+        <img className="sm:w-[40%] w-[95%] lg:w-[50%] rounded-md mx-auto" src={images[index]} alt="Image" />
     </div>
     )}
   
