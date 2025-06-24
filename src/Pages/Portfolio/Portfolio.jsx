@@ -6,6 +6,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 export default function Portfolio({toggleTheme,theme}) {
+
+
+
+
      const images = [port1, port2, port3]
       const [index, setIndex] = useState(null);
    function getCurrentImage(e) {
@@ -30,6 +34,7 @@ export default function Portfolio({toggleTheme,theme}) {
         }
     }
     useEffect(() => {
+     document.addEventListener("touchstart", function(){}, true);
     document.title = "Portfolio";
   })
 
