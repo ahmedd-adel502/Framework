@@ -27,10 +27,10 @@ export default function Portfolio({toggleTheme,theme}) {
 
     function backToMain(e){
         if(e.target !== e.target.closest(".overlay").querySelector("img")){
-            document.querySelector(".overlay").classList.add("hidden");
+            document.querySelector(".overlay")?.classList.add("hidden");
             setIndex(null);
         } else {
-            document.querySelector(".overlay").classList.remove("hidden");
+            document.querySelector(".overlay")?.classList.remove("hidden");
         }
     }
     useEffect(() => {
@@ -46,29 +46,29 @@ export default function Portfolio({toggleTheme,theme}) {
             <p className="text-gray-700 text-xl relative before:absolute before:w-[80px] before:h-[4px] dark:before:bg-white dark:after:bg-white dark:text-white before:bg-gray-700 before:left-[40px] before:top-[9px] after:absolute after:w-[80px] after:h-[4px] after:bg-gray-700 after:right-[40px] after:top-[9px]"><FaStar /></p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-6 my-5">
-            <div className="rounded-md relative group  w-[90%] mx-auto sm:w-full  cursor-pointer shadow-2xl"> 
-                <div className="absolute bg-maingreen top-0 left-0 bottom-0 right-0 rounded-md flex justify-center items-center text-white text-9xl opacity-0 group-hover:opacity-[0.9] invisible group-hover:visible transition-all duration-500 " onClick={getCurrentImage}> <FontAwesomeIcon icon={faPlus} />  
+            <div className="rounded-md relative group  w-[90%] mx-auto sm:w-full  cursor-pointer shadow-2xl" onClick={getCurrentImage}> 
+                <div className="absolute bg-maingreen top-0 left-0 bottom-0 right-0 rounded-md flex justify-center items-center text-white text-9xl opacity-0 group-hover:opacity-[0.9] invisible group-hover:visible transition-all duration-500 " > <FontAwesomeIcon icon={faPlus} />  
                 </div>
                 <img className="rounded-md" src={port1} alt="Port1" />
             </div>
-            <div className="rounded-md relative group  w-[90%] mx-auto sm:w-full  cursor-pointer shadow-2xl">
-                <div className="absolute bg-maingreen top-0 left-0 bottom-0 right-0 rounded-md flex justify-center items-center text-white text-9xl opacity-0 group-hover:opacity-[0.9] invisible group-hover:visible transition-all duration-500 " onClick={getCurrentImage}>  <FontAwesomeIcon icon={faPlus} />  </div>
+            <div className="rounded-md relative group  w-[90%] mx-auto sm:w-full  cursor-pointer shadow-2xl" onClick={getCurrentImage}>
+                <div className="absolute bg-maingreen top-0 left-0 bottom-0 right-0 rounded-md flex justify-center items-center text-white text-9xl opacity-0 group-hover:opacity-[0.9] invisible group-hover:visible transition-all duration-500 ">  <FontAwesomeIcon icon={faPlus} />  </div>
                 <img className="rounded-md" src={port2} alt="Port2" />
             </div>
-            <div className="rounded-md relative group w-[90%] mx-auto sm:w-full cursor-pointer">
-                <div className="absolute bg-maingreen top-0 left-0 bottom-0 right-0 rounded-md flex justify-center items-center text-white text-9xl opacity-0 group-hover:opacity-[0.9] invisible group-hover:visible transition-all duration-500 " onClick={getCurrentImage}>  <FontAwesomeIcon icon={faPlus} />  </div>
+            <div className="rounded-md relative group w-[90%] mx-auto sm:w-full cursor-pointer shadow-2xl" onClick={getCurrentImage}>
+                <div className="absolute bg-maingreen top-0 left-0 bottom-0 right-0 rounded-md flex justify-center items-center text-white text-9xl opacity-0 group-hover:opacity-[0.9] invisible group-hover:visible transition-all duration-500 ">  <FontAwesomeIcon icon={faPlus} />  </div>
                 <img className="rounded-md" src={port3} alt="Port3" />
             </div>
-            <div className="rounded-md relative group w-[90%] mx-auto sm:w-full   cursor-pointer shadow-2xl">
-                <div className="absolute bg-maingreen top-0 left-0 bottom-0 right-0 rounded-md flex justify-center items-center text-white text-9xl opacity-0 group-hover:opacity-[0.9] invisible group-hover:visible transition-all duration-500 " onClick={getCurrentImage}>  <FontAwesomeIcon icon={faPlus} /> </div>
+            <div className="rounded-md relative group w-[90%] mx-auto sm:w-full   cursor-pointer shadow-2xl" onClick={getCurrentImage}>
+                <div className="absolute bg-maingreen top-0 left-0 bottom-0 right-0 rounded-md flex justify-center items-center text-white text-9xl opacity-0 group-hover:opacity-[0.9] invisible group-hover:visible transition-all duration-500 ">  <FontAwesomeIcon icon={faPlus} /> </div>
                 <img className="rounded-md" src={port1} alt="Port1" />
             </div>
-            <div className="rounded-md relative group  w-[90%] mx-auto sm:w-full  cursor-pointer shadow-2xl">
-                <div className="absolute bg-maingreen top-0 left-0 bottom-0 right-0 rounded-md flex justify-center items-center text-white text-9xl opacity-0 group-hover:opacity-[0.9] invisible group-hover:visible transition-all duration-500 " onClick={getCurrentImage}>  <FontAwesomeIcon icon={faPlus} />  </div>
+            <div className="rounded-md relative group  w-[90%] mx-auto sm:w-full  cursor-pointer shadow-2xl" onClick={getCurrentImage}>
+                <div className="absolute bg-maingreen top-0 left-0 bottom-0 right-0 rounded-md flex justify-center items-center text-white text-9xl opacity-0 group-hover:opacity-[0.9] invisible group-hover:visible transition-all duration-500 ">  <FontAwesomeIcon icon={faPlus} />  </div>
                 <img className="rounded-md" src={port2} alt="Port2" />
             </div>
-            <div className="rounded-md relative group w-[90%] mx-auto sm:w-full   cursor-pointer shadow-2xl">
-                <div className="absolute bg-maingreen top-0 left-0 bottom-0 right-0 rounded-md flex justify-center items-center text-white text-9xl opacity-0 group-hover:opacity-[0.9] invisible group-hover:visible transition-all duration-500 " onClick={getCurrentImage}>  <FontAwesomeIcon icon={faPlus} />  </div>
+            <div className="rounded-md relative group w-[90%] mx-auto sm:w-full   cursor-pointer shadow-2xl" onClick={getCurrentImage}>
+                <div className="absolute bg-maingreen top-0 left-0 bottom-0 right-0 rounded-md flex justify-center items-center text-white text-9xl opacity-0 group-hover:opacity-[0.9] invisible group-hover:visible transition-all duration-500 ">  <FontAwesomeIcon icon={faPlus} />  </div>
                 <img className="rounded-md" src={port3} alt="Port3" />
             </div>
         </div>
