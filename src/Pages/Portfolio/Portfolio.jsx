@@ -17,7 +17,7 @@ export default function Portfolio({toggleTheme,theme}) {
 
         if (selectedIndex !== -1) {
             setIndex(selectedIndex);
-            document.querySelector(".overlay").classList.remove("hidden");
+            document.querySelector(".overlay")?.classList.remove("hidden");
         }
     }
 

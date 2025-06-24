@@ -4,13 +4,13 @@ import { FaStar } from "react-icons/fa";
 export default function Contact({toggleTheme,theme}) {
      function isInputTouched(e) {
       if(e.target.value !== "") {
-        e.target.previousElementSibling.classList.remove("opacity-0")
-        e.target.previousElementSibling.classList.add("opacity-100","visible","top-[-15px]","transition-all","duration-500","ease-in-out")
+        e.target.parentElement.querySelector("label").classList.remove("opacity-0")
+        e.target.parentElement.querySelector("label").classList.add("opacity-100","visible","top-[-15px]","transition-all","duration-500","ease-in-out")
       } else {
-        e.target.previousElementSibling.classList.add("top-1")
-        e.target.previousElementSibling.classList.remove("opacity-100","top-[-15px]","visible") 
-        e.target.previousElementSibling.classList.add("opacity-0") 
-      }
+        e.target.parentElement.querySelector("label").classList.add("top-1")
+        e.target.parentElement.querySelector("label").classList.remove("opacity-100","top-[-15px]","visible") 
+        e.target.parentElement.querySelector("label").classList.add("opacity-0")
+      }  
     }
 
     useEffect(() => {
@@ -25,20 +25,20 @@ export default function Contact({toggleTheme,theme}) {
             </div>
             <div>
               <form className="flex flex-col gap-4 shadow-md rounded-2xl p-5 w-[90%] mx-auto sm:w-[90%] space-y-1 dark:text-white">
-               <div className="flex flex-col relative">
-                 <label htmlFor="name" className="px-2 absolute text-green-400 top-1 opacity-0 invisible">Your Name:</label>
+               <div className=" input-parent flex flex-col relative">
+                 <label htmlFor="name"  className=" label px-2 absolute text-green-400 top-1 opacity-0 invisible">Your Name:</label>
                   <input className="border-b-2  peer border-green-400/70 outline-none py-3 px-2 rounded-md placeholder:text-gray-700/70 dark:placeholder:text-gray-300" onInput={isInputTouched} type="text" placeholder="Your Name" name="name" />
                </div>
-                <div className="flex flex-col relative">
-                  <label htmlFor="age" className="px-2 absolute text-green-400 top-1 opacity-0 invisible">Your Age:</label>
+                <div className=" input-parent flex flex-col relative">
+                  <label htmlFor="age"  className=" label px-2 absolute text-green-400 top-1 opacity-0 invisible">Your Age:</label>
                   <input className="border-b-2  peer border-green-400/70 outline-none py-3 px-2 rounded-md placeholder:text-gray-700/70 dark:placeholder:text-gray-300" onInput={isInputTouched} type="text" placeholder="Your Age" name="age"  />
                 </div>
-                <div className="flex flex-col relative">
-                  <label htmlFor="email" className="px-2 absolute text-green-400 top-1 opacity-0 invisible">Your Email:</label>
+                <div className=" input-parent flex flex-col relative">
+                  <label htmlFor="email"  className=" label px-2 absolute text-green-400 top-1 opacity-0 invisible">Your Email:</label>
                    <input className="border-b-2  peer border-green-400/70 outline-none py-3 px-2 rounded-md placeholder:text-gray-700/70 dark:placeholder:text-gray-300" onInput={isInputTouched} type="email" placeholder="Your Email" name="email" />
                 </div>
-               <div className="flex flex-col relative">
-                 <label htmlFor="password" className="px-2 absolute text-green-400 top-1 opacity-0 invisible">Your Password:</label>
+               <div className=" input-parent flex flex-col relative">
+                 <label htmlFor="password"  className=" label px-2 absolute text-green-400 top-1 opacity-0 invisible">Your Password:</label>
                  <input className="border-b-2  peer border-green-400/70 outline-none py-3 px-2 rounded-md placeholder:text-gray-700/70 dark:placeholder:text-gray-300" onInput={isInputTouched} type="password" placeholder="Your Password" name="password" />
                </div>
 
