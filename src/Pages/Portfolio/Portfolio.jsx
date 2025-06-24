@@ -42,7 +42,7 @@ export default function Portfolio({toggleTheme,theme}) {
    <div className={`mt-[6rem]  min-h-[calc(95vh-64px)] relative  ${theme} dark:bg-gray-700 `}>
      <div className="container mx-auto pt-10 pb-10">
         <div className="flex flex-col  items-center justify-center text-gray-700 dark:text-white">
-            <h2 className="text-3xl sm:text-5xl font-bold mb-5 uppercase">Portfolio Component</h2>
+            <h2 className="text-3xl sm:text-5xl font-bold text-center mb-5 uppercase">Portfolio Component</h2>
             <p className="text-gray-700 text-xl relative before:absolute before:w-[80px] before:h-[4px] dark:before:bg-white dark:after:bg-white dark:text-white before:bg-gray-700 before:left-[40px] before:top-[9px] after:absolute after:w-[80px] after:h-[4px] after:bg-gray-700 after:right-[40px] after:top-[9px]"><FaStar /></p>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-6 my-5">
